@@ -9,11 +9,10 @@ angular.module('myApp.controllers')
 
     $scope.change = function() {
       search.keyword = $scope.keyword;
-
-      $http.get('/api/search', { keyword : search.keyword })
+      $http.get('/api/search?keyword=' + search.keyword, {})
         .success(function(data) {
-          if (typeof data.hits !== 'undefined') {
-            search.result = data.hits.hits;
+          if (typeof data.data.hits !== 'undefined') {
+            search.result = data.data.hits.hits;
           }
         });
     };
