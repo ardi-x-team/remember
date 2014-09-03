@@ -1,5 +1,5 @@
 {
-    "dbDSN": "localhost:27017/remember",
+    "dbDSN": "localhost:27017/rememberdb",
     "es":    {
         "connection": {
             "host": "localhost:9200",
