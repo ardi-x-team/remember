@@ -9,7 +9,7 @@ var api = {},
  * @constructor
  */
 api.GET = function(req, res) {
-    es.search({q: req.param('q')})
+    es.search({q: req.query.keyword})
         .then(function(docs){
             res.json({
                 data: docs
